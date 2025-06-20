@@ -121,7 +121,7 @@ def gbk_encoding_hashing(array):
     for word in array:
         gbk_bytes = word.hanzi.encode('gbk')
         val = (gbk_bytes[0] << 8) | gbk_bytes[1]
-        encoded[val] = word #building hash table while encoding, with GBK value as key and Mandarinword as its value
+        encoded[val] = word #building hash table while encoding, with GBK value as key and Mandarinword as its value. Each Hanzi is ensured to have unique GBK value
     return encoded
 
 hash_table=gbk_encoding_hashing(dictionary)
