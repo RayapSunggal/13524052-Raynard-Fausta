@@ -122,7 +122,8 @@ target_val = (target_gbk[0] << 8) | target_gbk[1]
 start = time.perf_counter()
 
 #Hash Table Build
-hash_table = {val: True for val in common_array_gbk} #Key is assigned with GBK Encoding value, Val is assigned with True as dummy as we are not looking for the value
+hash_table = {val: True for val in common_array_gbk} #Key is assigned with GBK Encoding value, Val is assigned with True as dummy as we are not looking for the value. GBK value is ensured to be unique
+
 
 if target_val in hash_table:
     print("Found")
